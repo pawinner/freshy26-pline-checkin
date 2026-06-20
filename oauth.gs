@@ -1,4 +1,4 @@
-const SPREADSHEET_ID = "105o7ABk2zn4ASM11wGjI3hw_UzT7NfRJlBzevJda1h0";
+const SPREADSHEET_ID = "1WIt0rRrIjL3tOrDwD-ZEMB4c4R-9-H6wXILi8UVPXGM";
 
 function doGet(e) {
   try {
@@ -157,6 +157,8 @@ function doGet(e) {
     }
     
     const userRow = data[userRowIdx];
+    const name = userRow[nameColIdx];
+    const surname = userRow[surnameColIdx];
     const nickname = userRow[nicknameColIdx];
     const job = userRow[jobColIdx];
     const checkedInVal = userRow[sessionColIdx];
@@ -168,6 +170,8 @@ function doGet(e) {
         sessionName: sessionName,
         user: {
           email: email,
+          name: name,
+          surname: surname,
           nickname: nickname,
           job: job,
           checkedInTime: checkedInTimeStr

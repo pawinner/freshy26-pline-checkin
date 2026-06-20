@@ -2,8 +2,8 @@ import "./styles.css";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
-  title: "Big Game 2026 - Staff Check-in",
-  description: "Staff check-in portal for Big Game 2026",
+  title: "MDCU Freshy Camp 2026 - P-line Check-in",
+  description: "P-line check-in portal for MDCU Freshy Camp 2026",
   icons: {
     icon: "/images/icon.png",
     shortcut: "/images/icon.png",

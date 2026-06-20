@@ -333,6 +333,10 @@ export default function CheckInClient({ userEmail }) {
 
             <div className="user-details">
               <div className="detail-item">
+                <span className="detail-label">ชื่อ-นามสกุล:</span>
+                <span className="detail-value">{userData?.name} {userData?.surname}</span>
+              </div>
+              <div className="detail-item">
                 <span className="detail-label">ชื่อเล่น:</span>
                 <span className="detail-value">{userData?.nickname || "-"}</span>
               </div>
@@ -381,6 +385,10 @@ export default function CheckInClient({ userEmail }) {
             </p>
 
             <div className="user-details" style={{ marginTop: "10px" }}>
+              <div className="detail-item">
+                <span className="detail-label">ชื่อ-นามสกุล:</span>
+                <span className="detail-value">{userData?.name} {userData?.surname}</span>
+              </div>
               <div className="detail-item">
                 <span className="detail-label">ชื่อเล่น:</span>
                 <span className="detail-value">{userData?.nickname || "-"}</span>

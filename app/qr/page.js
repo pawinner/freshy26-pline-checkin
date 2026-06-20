@@ -69,10 +69,10 @@ export default function QRPage() {
       <header className="qr-header">
         <div className="qr-logo-container">
           <div className="badge">
-            <span className="dot" /> Big Game 2026
+            <span className="dot" /> MDCU Freshy Camp 2026
           </div>
           <h1 className="qr-logo-text">
-            Hello Staff &amp; <span>P&apos;Demo</span>
+            Hello Staff &amp; <span>P&apos;Line</span>
           </h1>
         </div>
 
@@ -124,12 +124,12 @@ export default function QRPage() {
                 </div>
                 <p className="qr-subtitle-link">
                   <a
-                    href="https://biggame26-checkin.vercel.app"
+                    href="https://freshy26-pline-checkin.vercel.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="qr-link"
                   >
-                    https://biggame26-checkin.vercel.app
+                    https://freshy26-pline-checkin.vercel.app
                   </a>
                 </p>
               </div>
