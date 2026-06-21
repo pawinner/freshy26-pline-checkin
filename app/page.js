@@ -200,8 +200,8 @@ function HomeContent() {
       <div className="screen active" id="screen-welcome">
         <div className="card">
           <div className="badge"><span className="dot" /> MDCU Freshy Camp 2026 · P-line Portal</div>
-          <div className="headline">Hello<br />Staff &amp;<br /><span>P&apos;Line</span></div>
-          <p className="sub">ยินดีต้อนรับสู่ระบบเช็คอินสตาฟ<br /><strong>MDCU Freshy Camp 2026</strong> — กรุณายืนยันตัวตนก่อนเริ่มงาน</p>
+          <div className="headline">Hello<br /><span>P&apos;Line</span></div>
+          <p className="sub">ยินดีต้อนรับสู่ระบบเช็คอินพี่ไลน์<br /><strong>MDCU Freshy Camp 2026</strong> — กรุณายืนยันตัวตนก่อนเริ่มงาน</p>
           <button className="btn btn-primary" onClick={() => goTo("screen-location")}>
             <PinIcon />
             เริ่มเช็คอิน / Start Check-in

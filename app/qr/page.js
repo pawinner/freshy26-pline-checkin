@@ -72,7 +72,7 @@ export default function QRPage() {
             <span className="dot" /> MDCU Freshy Camp 2026
           </div>
           <h1 className="qr-logo-text">
-            Hello Staff &amp; <span>P&apos;Line</span>
+            Hello <span>P&apos;Line</span>
           </h1>
         </div>
 
@@ -157,7 +157,7 @@ export default function QRPage() {
                   <strong>🇹🇭</strong> กรุณาเปิดการเข้าถึงตำแหน่งพิกัด <em>GPS (Location Services)</em> บนโทรศัพท์และยืนยันว่าอยู่ภายในบริเวณ <strong>คณะแพทยศาสตร์ จุฬาฯ</strong> เท่านั้นก่อนกดปุ่มลงทะเบียนเช็คอิน
                 </li>
                 <li className="qr-caution-item">
-                  <strong>🇹🇭</strong> ระบบอนุญาตสิทธิ์เฉพาะการลงชื่อเข้าใช้ด้วยบัญชีอีเมลสตาฟ <strong>@docchula.com</strong> เท่านั้น
+                  <strong>🇹🇭</strong> ระบบอนุญาตสิทธิ์เฉพาะการลงชื่อเข้าใช้ด้วยบัญชีอีเมลพี่ไลน์ <strong>@docchula.com</strong> เท่านั้น
                 </li>
                 <li className="qr-caution-item">
                   <strong>🇬🇧</strong> To ensure successful registration, verify that you have enabled <em>GPS location services</em> on your mobile device and are physically present in the <strong>Faculty of Medicine, Chulalongkorn University</strong> zone.

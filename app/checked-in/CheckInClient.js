@@ -217,7 +217,7 @@ export default function CheckInClient({ userEmail }) {
         <div className="screen active">
           <div className="card">
             <div className="badge">
-              <span className="dot" /> ลงทะเบียนสตาฟ / Staff Registration
+              <span className="dot" /> ลงทะเบียนพี่ไลน์ / P&apos;Line Registration
             </div>
             <div className="headline headline-small" style={{ marginBottom: "12px" }}>
               <strong>ค้นหาชื่อของคุณ</strong><br />
