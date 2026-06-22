@@ -8,6 +8,9 @@ const TARGET_LAT = 13.733483;
 const TARGET_LNG = 100.537590;
 const RADIUS_M = 200;
 
+// Toggle location requirement: set to true to enable location check, or false to bypass it completely
+const REQUIRE_LOCATION = false;
+
 function GoogleIcon() {
   return (
     <svg className="g-icon" viewBox="0 0 268.152 273.883" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -202,8 +205,8 @@ function HomeContent() {
           <div className="badge"><span className="dot" /> MDCU Freshy Camp 2026 · P-line Portal</div>
           <div className="headline">Hello<br /><span>P&apos;Line</span></div>
           <p className="sub">ยินดีต้อนรับสู่ระบบเช็คอินพี่ไลน์<br /><strong>MDCU Freshy Camp 2026</strong> — กรุณายืนยันตัวตนก่อนเริ่มงาน</p>
-          <button className="btn btn-primary" onClick={() => goTo("screen-location")}>
-            <PinIcon />
+          <button className="btn btn-primary" onClick={() => goTo(REQUIRE_LOCATION ? "screen-location" : "screen-loc-ok")}>
+            {REQUIRE_LOCATION && <PinIcon />}
             เริ่มเช็คอิน / Start Check-in
           </button>
           {authError === "AccessDenied" && (
@@ -263,14 +266,23 @@ function HomeContent() {
 
       <div className="screen" id="screen-loc-ok">
         <div className="card centered">
-          <div className="steps">
-            <div className="step done" />
-            <div className="step done" />
-            <div className="step active" />
-          </div>
-          <div className="status-icon ok">✓</div>
-          <div className="status-title ok">Location OK</div>
-          <p className="status-msg">ยืนยันแล้ว — คุณอยู่ในบริเวณ<strong className="plain-strong"> คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</strong><br /><span>Confirmed — you are within the Faculty of Medicine, Chulalongkorn University event zone.</span></p>
+          {REQUIRE_LOCATION ? (
+            <>
+              <div className="steps">
+                <div className="step done" />
+                <div className="step done" />
+                <div className="step active" />
+              </div>
+              <div className="status-icon ok">✓</div>
+              <div className="status-title ok">Location OK</div>
+              <p className="status-msg">ยืนยันแล้ว — คุณอยู่ในบริเวณ<strong className="plain-strong"> คณะแพทยศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</strong><br /><span>Confirmed — you are within the Faculty of Medicine, Chulalongkorn University event zone.</span></p>
+            </>
+          ) : (
+            <>
+              <div className="headline headline-small"><span>Sign In</span></div>
+              <p className="sub">ยินดีต้อนรับสู่ระบบเช็คอินพี่ไลน์<br /><strong>MDCU Freshy Camp 2026</strong> — กรุณายืนยันตัวตนก่อนเริ่มงาน</p>
+            </>
+          )}
 
           <div className="divider">เข้าสู่ระบบเพื่อเช็คอิน · Sign in to continue</div>
 
@@ -279,6 +291,11 @@ function HomeContent() {
             Sign in with Docchula
           </button>
           <p className="signin-note">ลงชื่อเข้าใช้ด้วยบัญชี Docchula ของคุณ<br />เพื่อบันทึกการเข้าร่วมงาน MDCU Freshy Camp 2026</p>
+
+          {!REQUIRE_LOCATION && (
+            <button className="btn btn-ghost" onClick={() => goTo("screen-welcome")}>← ย้อนกลับ</button>
+          )}
+
           <p className="contact-info">
             พบปัญหาติดต่อ / Any problems? Please contact{" "}
             <a href="mailto:pawinner@docchula.com">pawinner@docchula.com</a>
