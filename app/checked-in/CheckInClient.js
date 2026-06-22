@@ -402,6 +402,68 @@ export default function CheckInClient({ userEmail }) {
                 <span className="detail-value">{sessionName || "-"}</span>
               </div>
             </div>
+
+            <div style={{
+              marginTop: "24px",
+              padding: "16px 18px",
+              borderRadius: "12px",
+              background: "rgba(45, 212, 191, 0.03)",
+              border: "1px dashed rgba(45, 212, 191, 0.2)",
+              width: "100%",
+              boxSizing: "border-box",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center"
+            }}>
+              <p style={{
+                fontSize: "13px",
+                fontWeight: "300",
+                color: "var(--muted)",
+                marginBottom: "12px",
+                textAlign: "center",
+                lineHeight: "1.4"
+              }}>
+                ดำเนินการต่อเพื่อเช็คชื่อน้อง<br/>
+                <em style={{ fontSize: "11px", fontStyle: "normal", opacity: 0.7 }}>Continue to check attendance</em>
+              </p>
+              
+              <a
+                href="https://freshyxnight2026.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+                style={{
+                  marginTop: "0",
+                  width: "100%",
+                  textDecoration: "none",
+                  borderColor: "var(--gold)",
+                  color: "var(--gold)",
+                  background: "rgba(45, 212, 191, 0.05)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "6px"
+                }}
+              >
+                เข้าสู่ระบบเช็คชื่อน้อง
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  style={{ display: "inline-block" }}
+                >
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
+            </div>
+
             <p className="contact-info">
               Any problems? Please contact{" "}
               <a href="mailto:pawinner@docchula.com">pawinner@docchula.com</a>
